@@ -1,0 +1,113 @@
+/**
+ * Mainstreet Cleaners Design System
+ * Design Tokens extracted from Figma
+ */
+
+:root {
+  /* ===================
+     COLOR PALETTE
+     =================== */
+  
+  /* Primary Colors */
+  --color-primary: #4da1a9;        /* Teal - Main brand color */
+  --color-primary-light: #6eb5bc;
+  --color-primary-dark: #3d8189;
+  
+  /* Accent Colors */
+  --color-accent: #ffa630;         /* Orange - CTAs, highlights */
+  --color-accent-light: #ffb854;
+  --color-accent-dark: #e59520;
+  
+  /* Secondary */
+  --color-secondary: #e56399;      /* Pink - Special offers, badges */
+  --color-secondary-light: #eb82ad;
+  --color-secondary-dark: #d14a83;
+  
+  /* Neutrals */
+  --color-dark: #272635;           /* Dark - Text, headers */
+  --color-light: #e8e9f3;          /* Light gray - Backgrounds */
+  --color-white: #ffffff;
+  --color-gray-100: #f7f7f9;
+  --color-gray-200: #e8e9f3;
+  --color-gray-300: #d1d3e0;
+  --color-gray-400: #9a9cb0;
+  --color-gray-500: #6b6d80;
+  
+  /* Semantic Colors */
+  --color-success: #4da1a9;
+  --color-warning: #ffa630;
+  --color-error: #e56399;
+  --color-info: #4da1a9;
+
+  /* ===================
+     TYPOGRAPHY
+     =================== */
+  
+  --font-family: 'Arial', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Font Sizes (from Figma) */
+  --font-size-xs: 0.75rem;         /* 12px */
+  --font-size-sm: 0.875rem;        /* 14px */
+  --font-size-base: 1rem;          /* 16px - Paragraph */
+  --font-size-lg: 1.125rem;        /* 18px */
+  --font-size-xl: 1.25rem;         /* 20px */
+  --font-size-2xl: 1.618rem;       /* ~26px - Heading 3 */
+  --font-size-3xl: 2.618rem;       /* ~42px - Heading 2 */
+  --font-size-4xl: 4.236rem;       /* ~68px - Heading 1 */
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* ===================
+     SPACING
+     =================== */
+  
+  --space-1: 0.25rem;    /* 4px */
+  --space-2: 0.5rem;     /* 8px */
+  --space-3: 0.75rem;    /* 12px */
+  --space-4: 1rem;       /* 16px */
+  --space-5: 1.5rem;     /* 24px */
+  --space-6: 2rem;       /* 32px */
+  --space-7: 2.5rem;     /* 40px */
+  --space-8: 3rem;       /* 48px */
+  --space-9: 4rem;       /* 64px */
+  --space-10: 5rem;      /* 80px */
+
+  /* ===================
+     BORDERS & RADIUS
+     =================== */
+  
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 1rem;      /* 16px */
+  --radius-xl: 1.5rem;    /* 24px */
+  --radius-full: 9999px;
+  
+  --border-width: 1px;
+  --border-width-2: 2px;
+
+  /* ===================
+     SHADOWS
+     =================== */
+  
+  --shadow-sm: 0 1px 2px rgba(39, 38, 53, 0.05);
+  --shadow-md: 0 4px 6px rgba(39, 38, 53, 0.1);
+  --shadow-lg: 0 10px 15px rgba(39, 38, 53, 0.1);
+  --shadow-xl: 0 20px 25px rgba(39, 38, 53, 0.15);
+
+  /* ===================
+     TRANSITIONS
+     =================== */
+  
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+}

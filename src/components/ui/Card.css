@@ -1,0 +1,45 @@
+/**
+ * Card Component Styles
+ * Uses design tokens from design-tokens.css
+ */
+
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+/* Variants */
+.card--default {
+  background-color: var(--color-white);
+}
+
+.card--elevated {
+  box-shadow: var(--shadow-md);
+}
+
+.card--elevated:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.card--outlined {
+  border: var(--border-width) solid var(--color-gray-300);
+}
+
+/* Padding */
+.card--padding-none {
+  padding: 0;
+}
+
+.card--padding-sm {
+  padding: var(--space-3);
+}
+
+.card--padding-md {
+  padding: var(--space-5);
+}
+
+.card--padding-lg {
+  padding: var(--space-7);
+}

@@ -1,0 +1,194 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import Badge from '../components/ui/Badge';
+import { Heading, Text } from '../components/ui/Typography';
+import '../styles/design-tokens.css';
+---
+
+<Layout title="Design System | Mainstreet Cleaners">
+  <main class="design-system">
+    <header class="header">
+      <Heading as="h1">Mainstreet Cleaners</Heading>
+      <Text size="lg" color="muted">Design System Documentation</Text>
+    </header>
+
+    <!-- Color Palette -->
+    <section class="section">
+      <Heading as="h2">Color Palette</Heading>
+      <div class="color-grid">
+        <div class="color-swatch">
+          <div class="swatch" style="background: var(--color-accent);"></div>
+          <Text size="sm">Accent</Text>
+          <Text size="sm" color="muted">#FFA630</Text>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch" style="background: var(--color-light);"></div>
+          <Text size="sm">Light</Text>
+          <Text size="sm" color="muted">#E8E9F3</Text>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch" style="background: var(--color-primary);"></div>
+          <Text size="sm">Primary</Text>
+          <Text size="sm" color="muted">#4DA1A9</Text>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch" style="background: var(--color-dark);"></div>
+          <Text size="sm">Dark</Text>
+          <Text size="sm" color="muted">#272635</Text>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch" style="background: var(--color-secondary);"></div>
+          <Text size="sm">Secondary</Text>
+          <Text size="sm" color="muted">#E56399</Text>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography -->
+    <section class="section">
+      <Heading as="h2">Typography</Heading>
+      <Card variant="outlined" padding="lg">
+        <Heading as="h1">Heading 1 - Hero Text</Heading>
+        <Heading as="h2">Heading 2 - Section Title</Heading>
+        <Heading as="h3">Heading 3 - Subsection</Heading>
+        <Heading as="h4">Heading 4 - Card Title</Heading>
+        <Text>Paragraph - Regular body text for descriptions and content.</Text>
+        <Text size="sm" color="muted">Small muted text for captions and metadata.</Text>
+      </Card>
+    </section>
+
+    <!-- Buttons -->
+    <section class="section">
+      <Heading as="h2">Buttons</Heading>
+      <Card variant="outlined" padding="lg">
+        <Heading as="h4">Variants</Heading>
+        <div class="button-row">
+          <Button variant="primary" client:load>Primary</Button>
+          <Button variant="secondary" client:load>Secondary</Button>
+          <Button variant="accent" client:load>Accent</Button>
+          <Button variant="outline" client:load>Outline</Button>
+          <Button variant="ghost" client:load>Ghost</Button>
+        </div>
+        
+        <Heading as="h4">Sizes</Heading>
+        <div class="button-row">
+          <Button size="sm" client:load>Small</Button>
+          <Button size="md" client:load>Medium</Button>
+          <Button size="lg" client:load>Large</Button>
+        </div>
+      </Card>
+    </section>
+
+    <!-- Badges -->
+    <section class="section">
+      <Heading as="h2">Badges</Heading>
+      <Card variant="outlined" padding="lg">
+        <div class="badge-row">
+          <Badge variant="primary" client:load>In Progress</Badge>
+          <Badge variant="success" client:load>Ready</Badge>
+          <Badge variant="warning" client:load>Pending</Badge>
+          <Badge variant="secondary" client:load>Premium</Badge>
+          <Badge variant="accent" client:load>New</Badge>
+          <Badge variant="neutral" client:load>Archived</Badge>
+        </div>
+      </Card>
+    </section>
+
+    <!-- Cards -->
+    <section class="section">
+      <Heading as="h2">Cards</Heading>
+      <div class="card-grid">
+        <Card variant="default" padding="md" client:load>
+          <Heading as="h4">Default Card</Heading>
+          <Text size="sm" color="muted">Basic container with no shadow</Text>
+        </Card>
+        <Card variant="elevated" padding="md" client:load>
+          <Heading as="h4">Elevated Card</Heading>
+          <Text size="sm" color="muted">With shadow, hover effect</Text>
+        </Card>
+        <Card variant="outlined" padding="md" client:load>
+          <Heading as="h4">Outlined Card</Heading>
+          <Text size="sm" color="muted">With border, no shadow</Text>
+        </Card>
+      </div>
+    </section>
+
+    <!-- Example: Service Card -->
+    <section class="section">
+      <Heading as="h2">Example: Service Card</Heading>
+      <div class="card-grid">
+        <Card variant="elevated" padding="lg" client:load>
+          <Badge variant="accent" client:load>Popular</Badge>
+          <Heading as="h3">Dry Cleaning</Heading>
+          <Text color="muted">Professional care for your suits, dresses, and delicate fabrics.</Text>
+          <Text size="lg" color="primary"><strong>From $5.99</strong></Text>
+          <Button variant="primary" fullWidth client:load>Schedule Pickup</Button>
+        </Card>
+        
+        <Card variant="elevated" padding="lg" client:load>
+          <Badge variant="secondary" client:load>Subscription</Badge>
+          <Heading as="h3">Weekly Service</Heading>
+          <Text color="muted">Never worry about laundry again. We pick up and deliver weekly.</Text>
+          <Text size="lg" color="primary"><strong>$49/month</strong></Text>
+          <Button variant="accent" fullWidth client:load>Start Subscription</Button>
+        </Card>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .design-system {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-5);
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: var(--space-9);
+  }
+
+  .section {
+    margin-bottom: var(--space-9);
+  }
+
+  .color-grid {
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+
+  .color-swatch {
+    text-align: center;
+  }
+
+  .swatch {
+    width: 100px;
+    height: 100px;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-2);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .button-row {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-5);
+  }
+
+  .badge-row {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-5);
+  }
+</style>

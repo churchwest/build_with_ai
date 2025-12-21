@@ -1,0 +1,69 @@
+/**
+ * Typography Component Styles
+ * Based on Figma type scale
+ */
+
+/* Headings */
+.heading {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  line-height: var(--line-height-tight);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.heading--h1 {
+  font-size: var(--font-size-4xl);
+  letter-spacing: -0.02em;
+}
+
+.heading--h2 {
+  font-size: var(--font-size-3xl);
+  letter-spacing: -0.01em;
+}
+
+.heading--h3 {
+  font-size: var(--font-size-2xl);
+}
+
+.heading--h4 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Text */
+.text {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  margin: 0 0 var(--space-3) 0;
+}
+
+.text--sm {
+  font-size: var(--font-size-sm);
+}
+
+.text--base {
+  font-size: var(--font-size-base);
+}
+
+.text--lg {
+  font-size: var(--font-size-lg);
+}
+
+/* Text Colors */
+.text--default {
+  color: var(--color-dark);
+}
+
+.text--muted {
+  color: var(--color-gray-500);
+}
+
+.text--primary {
+  color: var(--color-primary);
+}
+
+.text--accent {
+  color: var(--color-accent-dark);
+}

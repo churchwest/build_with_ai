@@ -1,41 +1,518 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Counter from '../components/Counter';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import Badge from '../components/ui/Badge';
+import { Heading, Text } from '../components/ui/Typography';
+import '../styles/design-tokens.css';
 ---
 
-<Layout title="Welcome to Astro + React">
-  <main>
-    <h1>Welcome to <span class="text-gradient">Astro + React</span></h1>
-    <p class="instructions">
-      This is a basic Astro application with React integration.
-    </p>
-    <Counter client:load />
+<Layout title="Mainstreet Cleaners | Professional Dry Cleaning & Laundry Service">
+  <main class="homepage">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <Badge variant="accent" client:load>🌟 Same-Day Service Available</Badge>
+        <Heading as="h1">More Time for What Matters</Heading>
+        <Text size="lg" className="hero-subtitle">
+          Professional dry cleaning and laundry service for busy executives and families. 
+          We pick up, clean, and deliver—so you don't have to.
+        </Text>
+        <div class="hero-buttons">
+          <Button variant="accent" size="lg" client:load>Schedule Pickup</Button>
+          <Button variant="outline" size="lg" client:load>View Pricing</Button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Status Tracker -->
+    <section class="order-status">
+      <div class="container">
+        <Card variant="elevated" padding="lg" client:load>
+          <Heading as="h3">Track Your Order</Heading>
+          <Text color="muted">Enter your order number to see where your clothes are in the process.</Text>
+          <div class="order-input-group">
+            <input 
+              type="text" 
+              placeholder="Order #12345" 
+              class="order-input"
+            />
+            <Button variant="primary" client:load>Track Order</Button>
+          </div>
+        </Card>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="container">
+        <div class="section-header">
+          <Heading as="h2">Our Services</Heading>
+          <Text size="lg" color="muted">Professional care for all your garment needs</Text>
+        </div>
+        
+        <div class="services-grid">
+          <Card variant="elevated" padding="lg" client:load>
+            <div class="service-image">
+              <img 
+                src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&h=400&fit=crop" 
+                alt="Professional dry cleaning service"
+              />
+            </div>
+            <Heading as="h3">Dry Cleaning</Heading>
+            <Text color="muted">
+              Expert care for suits, dresses, and delicate fabrics. Perfect for executives 
+              who need high-quality garment care.
+            </Text>
+            <Text size="lg" color="primary" className="price">From <strong>$5.99</strong></Text>
+            <Button variant="primary" fullWidth client:load>Learn More</Button>
+          </Card>
+
+          <Card variant="elevated" padding="lg" client:load>
+            <Badge variant="accent" className="service-badge" client:load>Most Popular</Badge>
+            <div class="service-image">
+              <img 
+                src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600&h=400&fit=crop" 
+                alt="Wash and fold laundry service"
+              />
+            </div>
+            <Heading as="h3">Wash & Fold</Heading>
+            <Text color="muted">
+              Convenient laundry service for busy families. We handle the washing, 
+              drying, and folding—properly organized and ready to use.
+            </Text>
+            <Text size="lg" color="primary" className="price">From <strong>$1.25/lb</strong></Text>
+            <Button variant="accent" fullWidth client:load>Get Started</Button>
+          </Card>
+
+          <Card variant="elevated" padding="lg" client:load>
+            <div class="service-image">
+              <img 
+                src="https://images.unsplash.com/photo-1489274495757-95c7c837b101?w=600&h=400&fit=crop" 
+                alt="Specialized garment care services"
+              />
+            </div>
+         div class="subscription-wrapper">
+          <div class="subscription-image">
+            <img 
+              src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&h=600&fit=crop" 
+              alt="Happy family with fresh laundry"
+            />
+          </div>
+          <Card variant="elevated" padding="lg" className="subscription-card" client:load>
+            <div class="subscription-content">
+              <div class="subscription-text">
+                <Badge variant="secondary" client:load>Subscription Service</Badge>
+                <Heading as="h2">Never Worry About Laundry Again</Heading>
+                <Text size="lg">
+                  Weekly pickup and delivery service for busy professionals and families. 
+                  Save time and money with our subscription plans.
+                </Text>
+                <ul class="benefits-list">
+                  <li>✓ Priority scheduling</li>
+                  <li>✓ 15% discount on all services</li>
+                  <li>✓ Free pickup & delivery</li>
+                  <li>✓ Cancel anytime</li>
+                </ul>
+                <div class="subscription-buttons">
+                  <Button variant="secondary" size="lg" client:load>Start Subscription</Button>
+                  <Button variant="ghost" size="lg" client:load>View Plans</Button>
+                </div>
+              </div>
+              <div class="subscription-pricing">
+                <Card variant="outlined" padding="md" client:load>
+                  <Text size="sm" color="muted" className="plan-label">Starting at</Text>
+                  <Heading as="h1" className="plan-price">$49<span class="plan-period">/mo</span></Heading>
+                  <Text size="sm" color="muted">For families & individuals</Text>
+                </Card>
+              </div>
+            </div>
+          </Card>
+        </div  <li>✓ Cancel anytime</li>
+              </ul>
+              <div class="subscription-buttons">
+                <Button variant="secondary" size="lg" client:load>Start Subscription</Button>
+                <Button variant="ghost" size="lg" client:load>View Plans</Button>
+              </div>
+            </div>
+            <div class="subscription-pricing">
+              <Card variant="outlined" padding="md" client:load>
+                <Text size="sm" color="muted" className="plan-label">Starting at</Text>
+                <Heading as="h1" className="plan-price">$49<span class="plan-period">/mo</span></Heading>
+                <Text size="sm" color="muted">For families & individuals</Text>
+              </Card>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+      <div class="container">
+        <div class="section-header">
+          <Heading as="h2">Why Mainstreet Cleaners?</Heading>
+          <Text size="lg" color="muted">Trusted by busy professionals and families</Text>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">⏰</div>
+            <Heading as="h4">Save Time</Heading>
+            <Text size="sm" color="muted">
+              We pick up and deliver on your schedule. More time for what matters.
+            </Text>
+          </div>
+          
+          <div class="feature">
+            <div class="feature-icon">🔍</div>
+            <Heading as="h4">Track Your Order</Heading>
+            <Text size="sm" color="muted">
+              Know exactly where your clothes are in the cleaning process.
+            </Text>
+          </div>
+          
+          <div class="feature">
+            <div class="feature-icon">👕</div>
+            <Heading as="h4">Expert Care</Heading>
+            <Text size="sm" color="muted">
+              Professional cleaning that extends the life of your garments.
+            </Text>
+          </div>
+          
+          <div class="feature">
+            <div class="feature-icon">💼</div>
+            <Heading as="h4">B2B Services</Heading>
+            <Text size="sm" color="muted">
+              Corporate accounts available for employee benefits programs.
+            </Text>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="container">
+        <Heading as="h2">Ready to Get Started?</Heading>
+        <Text size="lg" color="muted" className="cta-subtitle">
+          Schedule your first pickup today and experience the difference.
+        </Text>
+        <div class="cta-buttons">
+          <Button variant="accent" size="lg" client:load>Schedule Pickup</Button>
+          <Button variant="ghost" size="lg" client:load>Contact Us</Button>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
 
 <style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 60ch;
+  .homepage {
+    background-color: var(--color-white);
   }
-  h1 {
-    font-size: 3rem;
-    font-weight: 800;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-5);
+  }
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%),
+                url('https://images.unsplash.com/photo-1558317374-067fb5f30001?w=1920&h=1080&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    color: var(--color-white);
+    padding: var(--space-10) 0;
+    text-align: center;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(77, 161, 169, 0.9) 0%, rgba(61, 129, 137, 0.85) 100%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero :global(.heading) {
+    color: var(--color-white);
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+
+  .hero :global(.hero-subtitle) {
+    color: var(--color-white);
+    max-width: 700px;
+    margin: 0 auto var(--space-6);
+    opacity: 0.95;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Order Status */
+  .order-status {
+    padding: var(--space-8) 0;
+    background-color: var(--color-gray-100);
+  }
+
+  .order-input-group {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+  }
+
+  .order-input {
+    flex: 1;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family);
+    border: var(--border-width-2) solid var(--color-gray-300);
+    border-radius: var(--radius-md);
+    transition: border-color var(--transition-fast);
+  }
+
+  .order-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+
+  /* Services Section */
+  .services {
+    padding: var(--space-10) 0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-8);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+  }
+
+  .service-image {
+    margin: calc(var(--space-5) * -1) calc(var(--space-7) * -1) var(--space-5);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .service-image img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-base);
+  }
+
+  :global(.card--elevated):hover .service-image img {
+    transform: scale(1.05);
+  }
+
+  :global(.service-badge) {
+    position: absolute;
+    top: var(--space-5);
+    right: var(--space-5);
+    z-index: 10;
+  }
+
+  :global(.price) {
+    margin: var(--space-5) 0;
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-gray-200);
+  }
+
+  /* Subscription Section */
+  .subscription {
+    padding: var(--space-10) 0;
+    background-color: var(--color-gray-100);
+  }
+
+  .subscription-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    align-items: center;
+  }
+
+  .subscription-image {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .subscription-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    display: block;
+  }
+
+  :global(.subscription-card) {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
+    color: var(--color-white);
+  }
+
+  .subscription-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-8);
+    align-items: center;
+  }
+
+  .subscription-content :global(.heading),
+  .subscription-content :global(.text) {
+    color: var(--color-white);
+  }
+
+  .benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-5) 0;
+  }
+
+  .benefits-list li {
+    font-size: var(--font-size-lg);
+    margin: var(--space-2) 0;
+  }
+
+  .subscription-buttons {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+
+  .subscription-pricing {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    min-width: 200px;
+    text-align: center;
+  }
+
+  :global(.plan-label) {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-2);
+  }
+
+  :global(.plan-price) {
+    color: var(--color-white) !important;
     margin: 0;
   }
-  .text-gradient {
-    background-image: linear-gradient(45deg, #4f39fa, #da62c4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 100%;
-    background-clip: text;
+
+  .plan-period {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-normal);
   }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    background: #4f39fa33;
-    padding: 1rem;
-    border-radius: 0.4rem;
+
+  /* Why Us Section */
+  .why-us {
+    padding: var(--space-10) 0;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-7);
+  }
+
+  .feature {
+    text-align: center;
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-3);
+  }
+
+  /* CTA Section */
+  .cta {
+    padding: var(--space-10) 0;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+    text-align: center;
+  }
+
+  .cta :global(.heading) {
+    color: var(--color-dark);
+    margin-bottom: var(--space-4);
+  }
+
+  :global(.cta-subtitle) {
+    color: var(--color-dark);
+    max-width: 600px;
+    margin: 0 auto var(--space-6);
+    opacity: 0.9;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 500px;
+      padding: var(--space-8) 0;
+    }
+
+    .subscription-wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .subscription-image {
+      height: 300px;
+    }
+
+    .subscription-content {
+      grid-template-columns: 1fr;
+    }
+
+    .subscription-pricing {
+      margin-top: var(--space-5);
+    }
+
+    .order-input-group {
+      flex-direction: column;
+    }
+
+    .hero-buttons,
+    .subscription-buttons,
+    .cta-buttons {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .service-image {
+      margin: calc(var(--space-5) * -1) calc(var(--space-5) * -1) var(--space-4);
+    }
   }
 </style>

@@ -1,0 +1,56 @@
+/**
+ * Badge Component Styles
+ * Uses design tokens from design-tokens.css
+ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Sizes */
+.badge--sm {
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--font-size-xs);
+}
+
+.badge--md {
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-sm);
+}
+
+/* Variants */
+.badge--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.badge--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.badge--accent {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.badge--success {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.badge--warning {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.badge--neutral {
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-500);
+}
